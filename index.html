@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portal de Turnos</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="./logoCMGnuevo-1.png" alt="Clínica Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <div id="user-info" class="user-info">
+                    <!-- Aquí se mostrará el avatar y los datos del paciente -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left">
+                <div class="left-top">
+                    <div class="datos_paciente">
+                        <h4>Datos del Paciente</h4>
+                        <form action="">
+                            <input type="text" name="id" placeholder="Numero de HC" class="input">
+                            <input type="text" name="nombre" placeholder="Nombre" class="input">
+                            <input type="text" name="apellido" placeholder="Apellido" class="input">
+                            <input type="text" name="dni" placeholder="DNI" class="input">
+                            <input type="text" name="telefono" placeholder="Teléfono" class="input">
+                            <input type="text" name="email" placeholder="Email" class="input">
+                        </form>
+                    </div>
+                    
+                    <h2>Seleccione la Especialidad</h2>
+                    <select id="especialidad">
+                        <option value="" disabled selected>Selecciones la especialidad</option>
+                        <option value="3">Clinica Medica</option>
+                        <option value="76">Cirugia General</option>
+                        <option value="4">Cardiologia</option>
+                    </select>
+                    <button id="fetchButton">Buscar</button>
+                </div>
+                <div class="left-bottom">
+                    <h2>Sección Izquierda 2</h2>
+                    <p>Contenido de la sección izquierda 2.</p>
+                   <button id="busqueda_paciente_is">Buscar Paciente</button>
+                </div>
+            </div>
+            
+            <div class="right">
+                <h2>Disponibilidad</h2>
+                <p>Selecciones una opcion para tomar el turno.</p>
+                <div id="result"></div>  <div id="error"></div>
+            </div>
+        </div>
+        
+        
+
+        <script src="script.js"></script>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Clínica Monte Grande. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

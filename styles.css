@@ -1,0 +1,136 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+}
+
+header {
+    background: #2e3b4e;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .logo {
+    float: left;
+    display: inline;
+    margin-top: 10px;
+    width: 150px;
+
+}
+
+header nav {
+    /* float: right; */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos del nav */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    flex-grow: 1; /* Permite que el nav crezca para ocupar todo el espacio disponible */
+    /* margin-top: 15px; */
+}
+/*
+header nav {
+    float: right;
+    display: inline;
+    margin-top: 15px;
+}
+*/
+header nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+*/
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+header nav ul li a:hover {
+    background-color: #4d5a70;
+}
+
+main {
+    padding: 20px 0;
+}
+
+main .left, main .right {
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.left-top, .left-bottom {
+    background-color: #f5e1fc9c;
+    padding: 2px;
+    flex: 1;
+}
+main .left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+}
+
+main .right {
+    flex: 2;
+    background-color:  #f5e1fc9c;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+footer {
+    background: #2e3b4e;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.datos_paciente h4 .datos_paciente form{
+    padding: 1px;
+    margin: 1px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    /* margin-left: auto; */
+}
+
+.user-info img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.user-info .user-name {
+    color: white;
+    font-size: 14px;
+    white-space: nowrap; /* Evita que el nombre del usuario se rompa en varias líneas */
+    overflow: hidden; /* Oculta cualquier contenido que desborde */
+    text-overflow: ellipsis; /* Añade puntos suspensivos si el contenido desborda */
+}
+
+@media (min-height: 800px) {
+    footer {
+        position: relative;
+    }
+    .user-info {
+        margin-left: auto; /* Mueve el avatar y los datos del paciente hacia la derecha */
+    }
+}
